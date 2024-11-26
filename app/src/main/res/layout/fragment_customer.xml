@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.CustomerFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="5dp">
+        <!-- TODO: Update blank fragment layout -->
+
+
+        <TextView
+            android:id="@+id/lblCustomerManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="Customer Manager"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/btnFilterCustomer"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_search_foreground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lblCustomerManager"
+            app:tint="@color/design_default_color_primary" />
+
+        <ImageView
+            android:id="@+id/btnRefreshCustomer"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_refresh_foreground"
+            app:layout_constraintStart_toEndOf="@id/btnFilterCustomer"
+            app:layout_constraintTop_toBottomOf="@id/lblCustomerManager"
+            app:tint="@color/design_default_color_primary"
+            tools:layout_editor_absoluteX="25dp" />
+
+        <ImageView
+            android:id="@+id/btnDeleteSelectedCustomer"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_delete_foreground"
+            app:layout_constraintStart_toEndOf="@+id/btnRefreshCustomer"
+            app:layout_constraintTop_toBottomOf="@id/lblCustomerManager"
+            app:tint="@color/red" />
+
+        <TextView
+            android:id="@+id/lblSortCustomer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="22dp"
+            android:text="Sort by:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnRefreshCustomer" />
+
+        <TextView
+            android:id="@+id/lblFilterCustomer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="26dp"
+            android:text="Filter by:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lblSortCustomer" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="select all"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/cbSelectAllCustomers"
+            app:layout_constraintTop_toBottomOf="@+id/lblCustomerManager" />
+
+        <CheckBox
+            android:id="@+id/cbSelectAllCustomers"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblCustomerManager" />
+
+        <Spinner
+            android:id="@+id/sortByScoreSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintHorizontal_bias="0.055"
+            app:layout_constraintStart_toEndOf="@+id/lblSortCustomer"
+            app:layout_constraintTop_toBottomOf="@id/btnRefreshCustomer" />
+
+        <Spinner
+            android:id="@+id/sortByTotalVoucherQuantitySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintHorizontal_bias="0.055"
+            app:layout_constraintStart_toEndOf="@+id/sortByScoreSpinner"
+            app:layout_constraintTop_toBottomOf="@id/btnRefreshCustomer" />
+
+        <Spinner
+            android:id="@+id/filterByRankSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/lblFilterCustomer"
+            app:layout_constraintTop_toBottomOf="@id/sortByScoreSpinner" />
+
+        <Spinner
+            android:id="@+id/filterByDiscountValueSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+
+            app:layout_constraintStart_toEndOf="@+id/filterByRankSpinner"
+            app:layout_constraintTop_toBottomOf="@id/sortByScoreSpinner" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblFilterCustomer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAddCustomer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|bottom"
+        android:layout_margin="16dp"
+        android:contentDescription="Submit"
+        android:src="@drawable/ic_add_foreground"
+        app:maxImageSize="40dp" />
+
+</FrameLayout>

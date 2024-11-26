@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="@color/light_gray"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tvCustomerId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="ID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCustomerScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:text="score"
+        app:layout_constraintStart_toEndOf="@+id/tvCustomerRank"
+        app:layout_constraintTop_toBottomOf="@+id/tvCustomerName" />
+
+    <TextView
+        android:id="@+id/tvCustomerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Nguyen Van A"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCustomerId" />
+
+
+    <TextView
+        android:id="@+id/tvCustomerRank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Rank"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCustomerName" />
+
+    <TextView
+        android:id="@+id/tvCustomerDoB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="2000-09-05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCustomerRank" />
+
+    <TextView
+        android:id="@+id/tvCustomerGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Male"
+        app:layout_constraintStart_toEndOf="@+id/tvCustomerDoB"
+        app:layout_constraintTop_toBottomOf="@+id/tvCustomerRank" />
+
+    <ImageView
+        android:id="@+id/btnEditCustomer"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_edit_foreground"
+        app:layout_constraintEnd_toStartOf="@+id/btnDeleteCustomer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/design_default_color_primary" />
+
+    <ImageView
+        android:id="@+id/btnDetailCustomer"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_detail_foreground"
+        app:layout_constraintEnd_toStartOf="@+id/btnEditCustomer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/design_default_color_primary" />
+
+    <ImageView
+        android:id="@+id/btnDeleteCustomer"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_delete_foreground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/red" />
+
+    <CheckBox
+        android:id="@+id/cbSelectCustomer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

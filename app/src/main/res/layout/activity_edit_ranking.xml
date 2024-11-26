@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/edit_ranking_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_back_foreground" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Ranking"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblRankingId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="ID"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <!-- Tên người dùng -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etRankingName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input name" />
+
+        <!-- Ngày sinh -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Description"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etRankingDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Email -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Promotion Score"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etRankingPromotionScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input score"
+            android:inputType="number" />
+
+        <!-- Số điện thoại -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Reward"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etRankingReward"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input reward"
+            android:inputType="numberDecimal" />
+
+        <!-- Nút Lưu và Hủy -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSaveRanking"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/design_default_color_primary"
+                android:text="Save"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/design_default_color_primary"
+                android:text="Cancel"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

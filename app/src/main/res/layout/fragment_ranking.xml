@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.RankingFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/lblRankingManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="Ranking Manager"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnRefreshRanking"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_refresh_foreground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lblRankingManager"
+            app:tint="@color/design_default_color_primary" />
+
+        <ImageView
+            android:id="@+id/btnDeleteSelectedRanking"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+
+            android:src="@drawable/ic_delete_foreground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lblRankingManager"
+            app:tint="@color/red" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="select all"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/cbSelectAllRankings"
+            app:layout_constraintTop_toBottomOf="@+id/lblRankingManager" />
+
+        <CheckBox
+            android:id="@+id/cbSelectAllRankings"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/btnDeleteSelectedRanking"
+            app:layout_constraintTop_toBottomOf="@+id/lblRankingManager" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvRanking"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnDeleteSelectedRanking" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAddRanking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|bottom"
+        android:layout_margin="16dp"
+        android:contentDescription="Submit"
+        android:src="@drawable/ic_add_foreground"
+        app:maxImageSize="40dp" />
+</FrameLayout>
