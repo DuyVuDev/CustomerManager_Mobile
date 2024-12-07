@@ -72,7 +72,8 @@ public class CustomerFragment extends Fragment {
         rankingService = ApiClient.getRetrofitInstance().create(RankingService.class);
         voucherService = ApiClient.getRetrofitInstance().create(VoucherService.class);
         customersList = new ArrayList<>();
-
+        rankName =  "null";
+        discount = "null";
         rcvCustomer = view.findViewById(R.id.rcvCustomer);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(view.getContext());
         rcvCustomer.setLayoutManager(linearLayoutManager);
